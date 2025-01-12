@@ -39,7 +39,7 @@ def record_screen():
     while is_recording:
         frame = capture_screen()
         out.write(frame)
-        # time.sleep(1)
+        time.sleep(2)
     if out:
         out.release()
 
@@ -217,7 +217,7 @@ counterstrafe, s tap, abuse higherh momentum, etc. anything to get first hit and
             "role": "user",
             "content": [
                 background_info + "These are frames from gameplay of the video game minecraft specifically on the server minemen.club on 1.8.9 (the combat version without hitdelay) please provide insightful commentary as to what the player did right and what they did wrong",
-                *map(lambda x: {"image": x, "resize": 768}, base64Frames[0::5]),
+                *map(lambda x: {"image": x, "resize": 768}, base64Frames),
             ],
         },
     ]
