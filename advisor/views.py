@@ -23,7 +23,7 @@ client = OpenAI()
 # Globals for screen recording
 screen_width, screen_height = pyautogui.size()
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-frame_rate = 120
+frame_rate = 30
 out = None
 is_recording = False
 recording_thread = None
@@ -217,7 +217,7 @@ counterstrafe, s tap, abuse higherh momentum, etc. anything to get first hit and
             "role": "user",
             "content": [
                 background_info + "These are frames from gameplay of the video game minecraft specifically on the server minemen.club on 1.8.9 (the combat version without hitdelay) please provide insightful commentary as to what the player did right and what they did wrong",
-                *map(lambda x: {"image": x, "resize": 768}, base64Frames[0::50]),
+                *map(lambda x: {"image": x, "resize": 768}, base64Frames[0::5]),
             ],
         },
     ]
