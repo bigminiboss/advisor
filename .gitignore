@@ -1,1 +1,10 @@
 .env
+*.pyc
+*.sqlite3
+*.avi
+*.json
+*.cmd
+*.ps1
+*.ts
+*.js
+*.mjs

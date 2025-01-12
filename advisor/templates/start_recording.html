@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Recording</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        /* Basic reset for a clean slate */
+    body, h1, h2, p, a {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+    
+    .container {
+        max-width: 800px;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+        padding: 40px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    h1, h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        color: #ddd;
+    }
+    
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .button {
+        background: #2a5298;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 14px 28px;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        transition: background 0.3s, transform 0.3s;
+    }
+    
+    .button:hover {
+        background: #1e3c72;
+        transform: scale(1.05);
+    }
+    
+    button:focus {
+        outline: none;
+    }
+    
+        </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Recording Started</h1>
+        <a href="/stop-recording/" class="button">Stop Recording</a>
+        <a href="/analyze-gameplay/" class="button">Analyze Gameplay</a>
+    </div>
+</body>
+</html>
