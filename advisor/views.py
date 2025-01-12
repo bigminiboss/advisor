@@ -39,7 +39,7 @@ def record_screen():
     while is_recording:
         frame = capture_screen()
         out.write(frame)
-        time.sleep(2)
+        time.sleep(1)
     if out:
         out.release()
 
